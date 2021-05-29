@@ -1,0 +1,35 @@
+{
+  "name": "paige-watch",
+  "version": "0.1.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@fitbit/sdk": "~5.0.2",
+    "@fitbit/sdk-cli": "^1.7.3",
+    "fitbit-sdk-types": "^6.0.3"
+  },
+  "fitbit": {
+    "appUUID": "ffe6736b-41bf-4154-a4a2-d81c764be52d",
+    "appType": "clockface",
+    "appDisplayName": "Paige's Watch",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#ffffff",
+    "buildTargets": [
+      "atlas",
+      "vulcan"
+    ],
+    "i18n": {},
+    "defaultLanguage": "en-US",
+    "requestedPermissions": [
+      "access_activity",
+      "access_exercise",
+      "access_heart_rate",
+      "access_internet"
+    ]
+  },
+  "scripts": {
+    "build": "fitbit-build",
+    "debug": "fitbit",
+    "start": "fitbit-build && fitbit install"
+  }
+}
