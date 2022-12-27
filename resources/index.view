@@ -1,18 +1,53 @@
-<svg viewport-fill="#0033cc" fill="white">
-  <image href="220px-Flag_of_the_United_States.jpg" width="116" height="220" x="210" y="115" />
+<svg viewport-fill="#15B9ED" fill="white">
+  <image href="snowing/snowman.png" width="250" height="250" x="140" y="115" />
   <text text-length="10" class="uppercase h5" x="29" y="51" id="date">---</text>
   <text class="h1" x="29" y="119" id="time">12:58</text>
 
   <!-- Steps -->
-  <image class="fb-aqua" href="steps_36px.png" width="34" height="34" x="29" y="142" />
-  <text text-length="10" class="h3" x="78" y="172" id="steps">---</text>
+  <image class="fb-aqua" href="steps_36px.png" width="24" height="24" x="29" y="152" />
+  <text text-length="10" class="h4" x="78" y="172" id="steps">---</text>
 
   <!-- Calories -->
-  <image class="fb-peach" href="calories_36px.png" width="34" height="34" x="29" y="190" />
-  <text text-length="10" class="h3" x="78" y="220" id="calories">---</text>
+  <image class="fb-peach" href="calories_36px.png" width="24" height="24" x="29" y="190" />
+  <text text-length="10" class="h4" x="78" y="210" id="calories">---</text>
 
   <!-- Heart Rate -->
-  <image class="fb-red" href="heart_rate_36px.png" width="34" height="34" x="29" y="238" />
-  <text text-length="10" class="h3" x="78" y="268" id="heart-rate">---</text>
+  <image class="fb-red" href="heart_rate_36px.png" width="24" height="24" x="29" y="228" />
+  <text text-length="10" class="h4" x="78" y="248" id="heart-rate">---</text>
+
+  <!-- Weather -->
+  <image class="fb-white" href="weather/thermometer.gray.png" width="24" height="24" x="29" y="266" />
+  <text text-length="10" class="h4" x="78" y="286" id="weather">---</text>
+
+  <!-- Snowing affect -->
+  <defs>
+    <symbol id="snowflake">
+      <image id="image" href="snowing/flake1.png"/>
+      <animate attributeName="y" begin="enable" from="-50" to="90%" dur="5" final="restore" easing="ease" repeatCount="indefinite" />
+      <animate attributeName="opacity" begin="enable" from="1" to="0" dur="5" final="freeze" easing="ease" repeatCount="indefinite"/>
+    </symbol>
+  </defs>
+
+  <use href="#snowflake" id="flake0"/>
+  <use href="#snowflake" id="flake1"/>
+  <use href="#snowflake" id="flake2"/>
+  <use href="#snowflake" id="flake3"/>
+  <use href="#snowflake" id="flake4"/>
+  <use href="#snowflake" id="flake5"/>
+  <use href="#snowflake" id="flake6"/>
+  <use href="#snowflake" id="flake7"/>
+  <use href="#snowflake" id="flake8"/>
+  <use href="#snowflake" id="flake9"/>
+  <use href="#snowflake" id="flake10"/>
+  <use href="#snowflake" id="flake11"/>
+  <use href="#snowflake" id="flake12"/>
+  <use href="#snowflake" id="flake13"/>
+  <use href="#snowflake" id="flake14"/>
+  <use href="#snowflake" id="flake15"/>
+  <use href="#snowflake" id="flake16"/>
+  <use href="#snowflake" id="flake17"/>
+  <use href="#snowflake" id="flake18"/>
+  <use href="#snowflake" id="flake19"/>
+  <use href="#snowflake" id="flake20"/>
 
 </svg>

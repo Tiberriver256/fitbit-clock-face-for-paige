@@ -2,6 +2,9 @@ import clock, { TickEvent } from 'clock';
 import document from 'document';
 import { preferences } from 'user-settings';
 import { me as appbit } from 'appbit';
+import * as newfile from "./newfile";
+import { toFahrenheit } from "../common/utils";
+import { units } from "user-settings";
 
 clock.granularity = 'minutes'; // seconds, minutes, hours
 
@@ -93,4 +96,48 @@ if (HeartRateSensor) {
     });
     body.start();
   }
+}
+
+const weather = document.getElementById('weather')
+
+newfile.initialize(data => {
+  // fresh weather file received
+
+  // If the user-settings temperature == F and the result data.unit == Celsius then we convert to Fahrenheit
+  // Use this only if you use getWeatherData() function without the optional parameter.
+  data = units.temperature === "F" ? toFahrenheit(data): data;
+
+  weather.text = `${data.temperature}\u00B0`
+
+});
+
+startSnowing();
+
+function startSnowing() {
+  // console.log("Start snowing");
+  for (var i=0; i<=20; i++) {
+    var flake: ContainerElement = document.getElementById("flake" + i) as ContainerElement;
+    flake.y = -50;
+    flake.x = Math.floor((Math.random() * 280) + 10);
+    (flake.getElementById("image") as ImageElement).href = "snowing/flake" + Math.floor((Math.random() * 3) + 1) + ".png";
+
+    let size = Math.floor((Math.random() * 30) + 20);
+    flake.width = size;
+    flake.height = size;
+
+    startAnimation(i);
+  }
+}
+
+function randomStartTime() {
+  let value = Math.floor((Math.random() * 10000) + 10);
+  // console.log("Random time: " + value);
+  return value;
+}
+
+function startAnimation(flakeId) {
+  setTimeout(function() {
+    var flake = document.getElementById("flake" + flakeId);
+    flake.animate("enable");
+  }, randomStartTime());
 }

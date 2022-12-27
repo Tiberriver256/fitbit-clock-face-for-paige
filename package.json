@@ -4,9 +4,9 @@
   "private": true,
   "license": "UNLICENSED",
   "devDependencies": {
-    "@fitbit/sdk": "~5.0.2",
+    "@fitbit/sdk": "~6.0.0",
     "@fitbit/sdk-cli": "^1.7.3",
-    "fitbit-sdk-types": "^6.0.3"
+    "fitbit-sdk-types": "^8.0.3"
   },
   "fitbit": {
     "appUUID": "ffe6736b-41bf-4154-a4a2-d81c764be52d",
@@ -24,7 +24,9 @@
       "access_activity",
       "access_exercise",
       "access_heart_rate",
-      "access_internet"
+      "access_internet",
+      "access_location",
+      "run_background"
     ]
   },
   "scripts": {
