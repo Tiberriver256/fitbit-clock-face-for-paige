@@ -1,6 +1,12 @@
 <svg viewport-fill="#15B9ED" fill="white">
-  <image href="snowing/snowman.png" width="250" height="250" x="140" y="115" />
-  <text text-length="10" class="uppercase h5" x="29" y="51" id="date">---</text>
+  <g id="bat">
+    <image id="bat-icon" x="253" y="35" width="16" height="16" class="icon" href="battery_24px.png" />
+    <svg x="257" y="37" height="14" width="10">
+      <rect id="bat-fill" width="8" fill="white" />
+    </svg>
+    <text id="bat-count" x="271" y="51" class="h5" text-length="10">--</text>
+  </g>
+  <text text-length="20" class="uppercase h5" x="29" y="51" id="date">---</text>
   <text class="h1" x="29" y="119" id="time">12:58</text>
 
   <!-- Steps -->
@@ -19,12 +25,12 @@
   <image class="fb-white" href="weather/thermometer.gray.png" width="24" height="24" x="29" y="266" />
   <text text-length="10" class="h4" x="78" y="286" id="weather">---</text>
 
-  <!-- Snowing affect -->
+  <!-- Snowing effect -->
   <defs>
     <symbol id="snowflake">
-      <image id="image" href="snowing/flake1.png"/>
-      <animate attributeName="y" begin="enable" from="-50" to="90%" dur="5" final="restore" easing="ease" repeatCount="indefinite" />
-      <animate attributeName="opacity" begin="enable" from="1" to="0" dur="5" final="freeze" easing="ease" repeatCount="indefinite"/>
+      <image id="image" href="snowing/flake1.png" />
+      <animate attributeName="y" begin="enable" end="disable" from="-50" to="90%" dur="5" final="restore" easing="ease" repeatCount="indefinite" />
+      <animate attributeName="opacity" begin="enable" end="disable" from="1" to="0" dur="5" final="freeze" easing="ease" repeatCount="indefinite"/>
     </symbol>
   </defs>
 
@@ -49,5 +55,27 @@
   <use href="#snowflake" id="flake18"/>
   <use href="#snowflake" id="flake19"/>
   <use href="#snowflake" id="flake20"/>
+  <use href="#snowflake" id="flake21"/>
+  <use href="#snowflake" id="flake22"/>
+  <use href="#snowflake" id="flake23"/>
+  <use href="#snowflake" id="flake24"/>
+  <use href="#snowflake" id="flake25"/>
+  <use href="#snowflake" id="flake26"/>
+  <use href="#snowflake" id="flake27"/>
+  <use href="#snowflake" id="flake28"/>
+  <use href="#snowflake" id="flake29"/>
+  <use href="#snowflake" id="flake30"/>
+  <use href="#snowflake" id="flake31"/>
+  <use href="#snowflake" id="flake32"/>
+  <use href="#snowflake" id="flake33"/>
+  <use href="#snowflake" id="flake34"/>
+  <use href="#snowflake" id="flake35"/>
+  <use href="#snowflake" id="flake36"/>
+  <use href="#snowflake" id="flake37"/>
+  <use href="#snowflake" id="flake38"/>
+  <use href="#snowflake" id="flake39"/>
+  <use href="#snowflake" id="flake40"/>
 
+
+  <image id="snowman" href="snowing/snowman.png" width="250" height="250" x="140" y="115" pointer-events="visible" />
 </svg>
