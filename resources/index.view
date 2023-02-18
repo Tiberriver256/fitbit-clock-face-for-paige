@@ -1,5 +1,12 @@
 <svg viewport-fill="#FFFF99" fill="white">
-  <text text-length="10" class="uppercase h5" x="29" y="51" id="date">---</text>
+  <g id="bat">
+    <image id="bat-icon" x="253" y="35" width="16" height="16" class="icon" href="battery_24px.png" />
+    <svg x="257" y="37" height="14" width="10">
+      <rect id="bat-fill" width="8" fill="white" />
+    </svg>
+    <text id="bat-count" x="271" y="51" class="h5" text-length="10">--</text>
+  </g>
+  <text text-length="20" class="uppercase h5" x="29" y="51" id="date">---</text>
   <text class="h1" x="29" y="119" id="time">12:58</text>
 
   <!-- Steps -->

@@ -5,42 +5,38 @@ import { me as appbit } from 'appbit';
 import * as newfile from "./newfile";
 import { toFahrenheit } from "../common/utils";
 import { units } from "user-settings";
+import { BatteryIndicator } from './battery-indicator';
 
 clock.granularity = 'minutes'; // seconds, minutes, hours
 
 const clockLabel = document.getElementById('time');
 const dateLabel = document.getElementById('date');
+const batteryIndicator = new BatteryIndicator(document);
 
-function getMonth(i) {
-  switch (i) {
-    case 0:
-      return 'Jan';
-    case 1:
-      return 'Feb';
-    case 2:
-      return 'Mar';
-    case 3:
-      return 'Apr';
-    case 4:
-      return 'May';
-    case 5:
-      return 'Jun';
-    case 6:
-      return 'Jul';
-    case 7:
-      return 'Aug';
-    case 8:
-      return 'Sep';
-    case 9:
-      return 'Oct';
-    case 10:
-      return 'Nov';
-    case 11:
-      return 'Dec';
-    default:
-      return 'Error';
-  }
-}
+const DAYS = {
+  0: "Sun",
+  1: "Mon",
+  2: "Tue",
+  3: "Wed",
+  4: "Thu",
+  5: "Fri",
+  6: "Sat",
+};
+
+const MONTHS = {
+  0: "Jan",
+  1: "Feb",
+  2: "Mar",
+  3: "Apr",
+  4: "May",
+  5: "Jun",
+  6: "Jul",
+  7: "Aug",
+  8: "Sep",
+  9: "Oct",
+  10: "Nov",
+  11: "Dec",
+};
 
 // Update the <text> element with the current time
 function updateClock(evt: TickEvent) {
@@ -51,9 +47,10 @@ function updateClock(evt: TickEvent) {
   }
   let mins = String(today.getMinutes());
   mins = mins.length === 2 ? mins : `0${mins}`;
-  dateLabel.text = `${getMonth(today.getMonth())} ${today.getDate()}`;
+  dateLabel.text = `${DAYS[today.getDay()]}, ${MONTHS[today.getMonth()]} ${today.getDate()}`;
   clockLabel.text = `${hours}:${mins}`;
   updateStats();
+  batteryIndicator.draw()
 }
 
 // Update the clock every tick event
@@ -66,7 +63,6 @@ const caloriesLabel = document.getElementById('calories');
 
 function updateStats() {
   if (appbit.permissions.granted('access_activity')) {
-    console.log(`${today.adjusted.steps} Steps`);
     stepsLabel.text = today.adjusted.steps.toString();
     caloriesLabel.text = today.adjusted.calories.toString();
   }
@@ -79,7 +75,6 @@ if (HeartRateSensor) {
   const heartRateLabel = document.getElementById('heart-rate');
   const hrm = new HeartRateSensor({ frequency: 1 });
   hrm.addEventListener('reading', () => {
-    console.log(`Current heart rate: ${hrm.heartRate}`);
     heartRateLabel.text = hrm.heartRate.toString();
   });
   hrm.start();
@@ -110,4 +105,3 @@ newfile.initialize(data => {
   weather.text = `${data.temperature}\u00B0`
 
 });
-
