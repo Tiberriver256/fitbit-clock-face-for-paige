@@ -111,33 +111,3 @@ newfile.initialize(data => {
 
 });
 
-startSnowing();
-
-function startSnowing() {
-  // console.log("Start snowing");
-  for (var i=0; i<=20; i++) {
-    var flake: ContainerElement = document.getElementById("flake" + i) as ContainerElement;
-    flake.y = -50;
-    flake.x = Math.floor((Math.random() * 280) + 10);
-    (flake.getElementById("image") as ImageElement).href = "snowing/flake" + Math.floor((Math.random() * 3) + 1) + ".png";
-
-    let size = Math.floor((Math.random() * 30) + 20);
-    flake.width = size;
-    flake.height = size;
-
-    startAnimation(i);
-  }
-}
-
-function randomStartTime() {
-  let value = Math.floor((Math.random() * 10000) + 10);
-  // console.log("Random time: " + value);
-  return value;
-}
-
-function startAnimation(flakeId) {
-  setTimeout(function() {
-    var flake = document.getElementById("flake" + flakeId);
-    flake.animate("enable");
-  }, randomStartTime());
-}

@@ -5,6 +5,10 @@
   text-length: 32;
 }
 
+text {
+  fill: #222222;
+}
+
 #background {
   width: 100%;
   height: 100%;
