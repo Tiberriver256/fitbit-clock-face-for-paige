@@ -1,14 +1,13 @@
-<svg viewport-fill="#15B9ED" fill="white">
-  <image href="snowing/snowman.png" width="250" height="250" x="140" y="115" />
+<svg viewport-fill="#FFFF99" fill="white">
   <text text-length="10" class="uppercase h5" x="29" y="51" id="date">---</text>
   <text class="h1" x="29" y="119" id="time">12:58</text>
 
   <!-- Steps -->
-  <image class="fb-aqua" href="steps_36px.png" width="24" height="24" x="29" y="152" />
+  <image class="fb-cyan" href="steps_36px.png" width="24" height="24" x="29" y="152" />
   <text text-length="10" class="h4" x="78" y="172" id="steps">---</text>
 
   <!-- Calories -->
-  <image class="fb-peach" href="calories_36px.png" width="24" height="24" x="29" y="190" />
+  <image class="fb-orange" href="calories_36px.png" width="24" height="24" x="29" y="190" />
   <text text-length="10" class="h4" x="78" y="210" id="calories">---</text>
 
   <!-- Heart Rate -->
@@ -16,38 +15,254 @@
   <text text-length="10" class="h4" x="78" y="248" id="heart-rate">---</text>
 
   <!-- Weather -->
-  <image class="fb-white" href="weather/thermometer.gray.png" width="24" height="24" x="29" y="266" />
+  <image class="fb-violet" href="weather/thermometer.gray.png" width="24" height="24" x="29" y="266" />
   <text text-length="10" class="h4" x="78" y="286" id="weather">---</text>
 
-  <!-- Snowing affect -->
-  <defs>
-    <symbol id="snowflake">
-      <image id="image" href="snowing/flake1.png"/>
-      <animate attributeName="y" begin="enable" from="-50" to="90%" dur="5" final="restore" easing="ease" repeatCount="indefinite" />
-      <animate attributeName="opacity" begin="enable" from="1" to="0" dur="5" final="freeze" easing="ease" repeatCount="indefinite"/>
-    </symbol>
-  </defs>
 
-  <use href="#snowflake" id="flake0"/>
-  <use href="#snowflake" id="flake1"/>
-  <use href="#snowflake" id="flake2"/>
-  <use href="#snowflake" id="flake3"/>
-  <use href="#snowflake" id="flake4"/>
-  <use href="#snowflake" id="flake5"/>
-  <use href="#snowflake" id="flake6"/>
-  <use href="#snowflake" id="flake7"/>
-  <use href="#snowflake" id="flake8"/>
-  <use href="#snowflake" id="flake9"/>
-  <use href="#snowflake" id="flake10"/>
-  <use href="#snowflake" id="flake11"/>
-  <use href="#snowflake" id="flake12"/>
-  <use href="#snowflake" id="flake13"/>
-  <use href="#snowflake" id="flake14"/>
-  <use href="#snowflake" id="flake15"/>
-  <use href="#snowflake" id="flake16"/>
-  <use href="#snowflake" id="flake17"/>
-  <use href="#snowflake" id="flake18"/>
-  <use href="#snowflake" id="flake19"/>
-  <use href="#snowflake" id="flake20"/>
+  <!-- Flower #1 -->
+  <g >
+    <g transform="translate(296,245)">
+      <image href="flower-petals-grayscale.png" width="50" height="50" x="$-25" y="$-25">
+        <animate attributeName="height" begin="click" from="50" to="200" dur="1" final="restore" />
+        <animate attributeName="width" begin="click" from="50" to="200" dur="1" final="restore" />
+        <animate attributeName="fill" from="red" to="orange" begin="load" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="orange" to="yellow" begin="load+3" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="yellow" to="green" begin="load+6" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="green" to="blue" begin="load+9" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="blue" to="purple" begin="load+12" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="purple" to="red" begin="load+15" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+      </image>
+      <animateTransform attributeType="rotate" from="0" to="360" dur="12s" repeatCount="indefinite" />
+      <animateTransform attributeType="scale" from="0" to="1" dur="2" />
+    </g>
+
+
+    <g transform="translate(296,245) scale(0)">
+      <image href="flower-petals-grayscale.png" width="50" height="50" x="$-25" y="$-25">
+        <animate attributeName="height" begin="click" from="50" to="200" dur="1" final="restore" />
+        <animate attributeName="width" begin="click" from="50" to="200" dur="1" final="restore" />
+        <animate attributeName="fill" from="red" to="orange" begin="load" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="orange" to="yellow" begin="load+3" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="yellow" to="green" begin="load+6" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="green" to="blue" begin="load+9" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="blue" to="purple" begin="load+12" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="purple" to="red" begin="load+15" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+      </image>
+      <animateTransform attributeType="rotate" begin="load+1" from="0" to="360" dur="12s" repeatCount="indefinite" />
+      <animateTransform attributeType="scale" from="0" to="1" dur="2" begin="load+2" final="keep" repeatCount="indefinite" repeatDur="10" />
+      <animateTransform attributeType="scale" from="1" to="0" dur="2" begin="load+11" final="keep" repeatCount="indefinite" repeatDur="10" />
+    </g>
+    <image fill="#111111" href="flower-center-grayscale.png" width="50" height="50" x="271" y="220">
+      <animate attributeName="height" begin="click" from="50" to="200" dur="1" final="restore" />
+      <animate attributeName="width" begin="click" from="50" to="200" dur="1" final="restore" />
+    </image>
+    <animate attributeName="opacity" begin="click" from="1" to="0" dur="1" final="keep" />
+    <animate attributeName="opacity" begin="click+6" from="0" to="1" dur="3" final="keep" />
+  </g>
+
+  <!-- Flower #2 -->
+  <g>
+    <g transform="translate(250,265)">
+      <image href="flower-petals-grayscale.png" width="50" height="50" x="$-25" y="$-25">
+        <animate attributeName="height" begin="click" from="50" to="200" dur="1" final="restore" />
+        <animate attributeName="width" begin="click" from="50" to="200" dur="1" final="restore" />
+        <animate attributeName="fill" from="purple" to="red" begin="load" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="red" to="orange" begin="load+3" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="orange" to="yellow" begin="load+6" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="yellow" to="green" begin="load+9" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="green" to="blue" begin="load+12" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="blue" to="purple" begin="load+15" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+      </image>
+      <animateTransform attributeType="rotate" from="0" to="360" dur="12s" repeatCount="indefinite" />
+      <animateTransform attributeType="scale" from="0" to="1" dur="2" />
+    </g>
+
+
+    <g transform="translate(250,265) scale(0)">
+      <image href="flower-petals-grayscale.png" width="50" height="50" x="$-25" y="$-25">
+        <animate attributeName="height" begin="click" from="50" to="200" dur="1" final="restore" />
+        <animate attributeName="width" begin="click" from="50" to="200" dur="1" final="restore" />
+        <animate attributeName="fill" from="purple" to="red" begin="load" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="red" to="orange" begin="load+3" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="orange" to="yellow" begin="load+6" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="yellow" to="green" begin="load+9" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="green" to="blue" begin="load+12" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="blue" to="purple" begin="load+15" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+      </image>
+      <animateTransform attributeType="rotate" begin="load+1" from="0" to="360" dur="12s" repeatCount="indefinite" />
+      <animateTransform attributeType="scale" from="0" to="1" dur="2" begin="load+2" final="keep" repeatCount="indefinite" repeatDur="10" />
+      <animateTransform attributeType="scale" from="1" to="0" dur="2" begin="load+11" final="keep" repeatCount="indefinite" repeatDur="10" />
+    </g>
+    <image fill="#111111" href="flower-center-grayscale.png" width="50" height="50" x="225" y="240">
+      <animate attributeName="height" begin="click" from="50" to="200" dur="1" final="restore" />
+      <animate attributeName="width" begin="click" from="50" to="200" dur="1" final="restore" />
+    </image>
+    <animate attributeName="opacity" begin="click" from="1" to="0" dur="1" final="keep" />
+    <animate attributeName="opacity" begin="click+6" from="0" to="1" dur="3" final="keep" />
+  </g>
+
+  <!-- Flower #3 -->
+  <g>
+    <g transform="translate(225,205)">
+      <image href="flower-petals-grayscale.png" width="50" height="50" x="$-25" y="$-25">
+        <animate attributeName="height" begin="click" from="50" to="200" dur="1" final="restore" />
+        <animate attributeName="width" begin="click" from="50" to="200" dur="1" final="restore" />
+        <animate attributeName="fill" from="blue" to="purple" begin="load" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="purple" to="red" begin="load+3" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="red" to="orange" begin="load+6" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="orange" to="yellow" begin="load+9" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="yellow" to="green" begin="load+12" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="green" to="blue" begin="load+15" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+      </image>
+      <animateTransform attributeType="rotate" from="0" to="360" dur="12s" repeatCount="indefinite" />
+      <animateTransform attributeType="scale" from="0" to="1" dur="2" />
+    </g>
+
+
+    <g transform="translate(225,205) scale(0)">
+      <image href="flower-petals-grayscale.png" width="50" height="50" x="$-25" y="$-25">
+        <animate attributeName="height" begin="click" from="50" to="200" dur="1" final="restore" />
+        <animate attributeName="width" begin="click" from="50" to="200" dur="1" final="restore" />
+        <animate attributeName="fill" from="blue" to="purple" begin="load" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="purple" to="red" begin="load+3" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="red" to="orange" begin="load+6" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="orange" to="yellow" begin="load+9" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="yellow" to="green" begin="load+12" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="green" to="blue" begin="load+15" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+      </image>
+      <animateTransform attributeType="rotate" begin="load+1" from="0" to="360" dur="12s" repeatCount="indefinite" />
+      <animateTransform attributeType="scale" from="0" to="1" dur="2" begin="load+2" final="keep" repeatCount="indefinite" repeatDur="10" />
+      <animateTransform attributeType="scale" from="1" to="0" dur="2" begin="load+11" final="keep" repeatCount="indefinite" repeatDur="10" />
+    </g>
+    <image fill="#111111" href="flower-center-grayscale.png" width="50" height="50" x="200" y="180">
+      <animate attributeName="height" begin="click" from="50" to="200" dur="1" final="restore" />
+      <animate attributeName="width" begin="click" from="50" to="200" dur="1" final="restore" />
+    </image>
+    <animate attributeName="opacity" begin="click" from="1" to="0" dur="1" final="keep" />
+    <animate attributeName="opacity" begin="click+6" from="0" to="1" dur="3" final="keep" />
+  </g>
+
+  <!-- Flower #4 -->
+  <g>
+    <g transform="translate(185,255)">
+      <image href="flower-petals-grayscale.png" width="50" height="50" x="$-25" y="$-25">
+        <animate attributeName="height" begin="click" from="50" to="200" dur="1" final="restore" />
+        <animate attributeName="width" begin="click" from="50" to="200" dur="1" final="restore" />
+        <animate attributeName="fill" from="green" to="blue" begin="load" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="blue" to="purple" begin="load+3" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="purple" to="red" begin="load+6" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="red" to="orange" begin="load+9" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="orange" to="yellow" begin="load+12" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="yellow" to="green" begin="load+15" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+      </image>
+      <animateTransform attributeType="rotate" from="0" to="360" dur="12s" repeatCount="indefinite" />
+      <animateTransform attributeType="scale" from="0" to="1" dur="2" />
+    </g>
+
+
+    <g transform="translate(185,255) scale(0)">
+      <image href="flower-petals-grayscale.png" width="50" height="50" x="$-25" y="$-25">
+        <animate attributeName="height" begin="click" from="50" to="200" dur="1" final="restore" />
+        <animate attributeName="width" begin="click" from="50" to="200" dur="1" final="restore" />
+        <animate attributeName="fill" from="green" to="blue" begin="load" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="blue" to="purple" begin="load+3" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="purple" to="red" begin="load+6" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="red" to="orange" begin="load+9" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="orange" to="yellow" begin="load+12" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="yellow" to="green" begin="load+15" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+      </image>
+      <animateTransform attributeType="rotate" begin="load+1" from="0" to="360" dur="12s" repeatCount="indefinite" />
+      <animateTransform attributeType="scale" from="0" to="1" dur="2" begin="load+2" final="keep" repeatCount="indefinite" repeatDur="10" />
+      <animateTransform attributeType="scale" from="1" to="0" dur="2" begin="load+11" final="keep" repeatCount="indefinite" repeatDur="10" />
+    </g>
+    <image fill="#111111" href="flower-center-grayscale.png" width="50" height="50" x="160" y="230">
+      <animate attributeName="height" begin="click" from="50" to="200" dur="1" final="restore" />
+      <animate attributeName="width" begin="click" from="50" to="200" dur="1" final="restore" />
+    </image>
+    <animate attributeName="opacity" begin="click" from="1" to="0" dur="1" final="keep" />
+    <animate attributeName="opacity" begin="click+6" from="0" to="1" dur="3" final="keep" />
+  </g>
+
+  <!-- Flower #5 -->
+  <g>
+    <g transform="translate(275,165)">
+      <image href="flower-petals-grayscale.png" width="50" height="50" x="$-25" y="$-25">
+        <animate attributeName="height" begin="click" from="50" to="200" dur="1" final="restore" />
+        <animate attributeName="width" begin="click" from="50" to="200" dur="1" final="restore" />
+        <animate attributeName="fill" from="yellow" to="green" begin="load" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="green" to="blue" begin="load+3" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="blue" to="purple" begin="load+6" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="purple" to="red" begin="load+9" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="red" to="orange" begin="load+12" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="orange" to="yellow" begin="load+15" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+      </image>
+      <animateTransform attributeType="rotate" from="0" to="360" dur="12s" repeatCount="indefinite" />
+      <animateTransform attributeType="scale" from="0" to="1" dur="2" />
+    </g>
+
+
+    <g transform="translate(275,165) scale(0)">
+      <image href="flower-petals-grayscale.png" width="50" height="50" x="$-25" y="$-25">
+        <animate attributeName="height" begin="click" from="50" to="200" dur="1" final="restore" />
+        <animate attributeName="width" begin="click" from="50" to="200" dur="1" final="restore" />
+        <animate attributeName="fill" from="yellow" to="green" begin="load" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="green" to="blue" begin="load+3" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="blue" to="purple" begin="load+6" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="purple" to="red" begin="load+9" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="red" to="orange" begin="load+12" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="orange" to="yellow" begin="load+15" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+      </image>
+      <animateTransform attributeType="rotate" begin="load+1" from="0" to="360" dur="12s" repeatCount="indefinite" />
+      <animateTransform attributeType="scale" from="0" to="1" dur="2" begin="load+2" final="keep" repeatCount="indefinite" repeatDur="10" />
+      <animateTransform attributeType="scale" from="1" to="0" dur="2" begin="load+11" final="keep" repeatCount="indefinite" repeatDur="10" />
+    </g>
+    <image fill="#111111" href="flower-center-grayscale.png" width="50" height="50" x="250" y="140">
+      <animate attributeName="height" begin="click" from="50" to="200" dur="1" final="restore" />
+      <animate attributeName="width" begin="click" from="50" to="200" dur="1" final="restore" />
+    </image>
+    <animate attributeName="opacity" begin="click" from="1" to="0" dur="1" final="keep" />
+    <animate attributeName="opacity" begin="click+6" from="0" to="1" dur="3" final="keep" />
+  </g>
+
+  <!-- Flower #6 -->
+  <g>
+    <g transform="translate(265,85)">
+      <image href="flower-petals-grayscale.png" width="50" height="50" x="$-25" y="$-25">
+        <animate attributeName="height" begin="click" from="50" to="200" dur="1" final="restore" />
+        <animate attributeName="width" begin="click" from="50" to="200" dur="1" final="restore" />
+        <animate attributeName="fill" from="orange" to="yellow" begin="load" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="yellow" to="green" begin="load+3" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="green" to="blue" begin="load+6" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="blue" to="purple" begin="load+9" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="purple" to="red" begin="load+12" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="red" to="orange" begin="load+15" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+      </image>
+      <animateTransform attributeType="rotate" from="0" to="360" dur="12s" repeatCount="indefinite" />
+      <animateTransform attributeType="scale" from="0" to="1" dur="2" />
+    </g>
+
+
+    <g transform="translate(265,85) scale(0)">
+      <image href="flower-petals-grayscale.png" width="50" height="50" x="$-25" y="$-25">
+        <animate attributeName="height" begin="click" from="50" to="200" dur="1" final="restore" />
+        <animate attributeName="width" begin="click" from="50" to="200" dur="1" final="restore" />
+        <animate attributeName="fill" from="orange" to="yellow" begin="load" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="yellow" to="green" begin="load+3" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="green" to="blue" begin="load+6" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="blue" to="purple" begin="load+9" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="purple" to="red" begin="load+12" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="red" to="orange" begin="load+15" dur="3" final="keep" repeatDur="18" repeatCount="indefinite"/>
+      </image>
+      <animateTransform attributeType="rotate" begin="load+1" from="0" to="360" dur="12s" repeatCount="indefinite" />
+      <animateTransform attributeType="scale" from="0" to="1" dur="2" begin="load+2" final="keep" repeatCount="indefinite" repeatDur="10" />
+      <animateTransform attributeType="scale" from="1" to="0" dur="2" begin="load+11" final="keep" repeatCount="indefinite" repeatDur="10" />
+    </g>
+    <image fill="#111111" href="flower-center-grayscale.png" width="50" height="50" x="240" y="60">
+      <animate attributeName="height" begin="click" from="50" to="200" dur="1" final="restore" />
+      <animate attributeName="width" begin="click" from="50" to="200" dur="1" final="restore" />
+    </image>
+    <animate attributeName="opacity" begin="click" from="1" to="0" dur="1" final="keep" />
+    <animate attributeName="opacity" begin="click+6" from="0" to="1" dur="3" final="keep" />
+  </g>
 
 </svg>
