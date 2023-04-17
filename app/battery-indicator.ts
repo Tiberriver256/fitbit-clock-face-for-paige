@@ -12,7 +12,7 @@ export let BatteryIndicator = function(document) {
   self.draw = function() {
     let level = battery.chargeLevel;
     batEl.text = `${Math.floor(level)}%`;
-    batFillEl.height = Math.floor(batFillHeight * level / 100.);
+    batFillEl.height = Math.floor(batFillHeight * level / 100);
     batFillEl.y = batFillHeight - batFillEl.height;
   }
   
