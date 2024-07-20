@@ -1,12 +1,10 @@
-<svg viewport-fill="#fcfce1" fill="white">
-  <image href="bumblebee.png" width="120" height="98" y="180" x="100%-120" />
-  <image href="bumblebee-mirror.png" width="100" height="82" y="220" x="30" />
-  <image href="yellow-flowers.png" width="240" y="120" x="50%-120" />
+<svg viewport-fill="#000000" fill="white">
+  <image href="the_office.png" width="300" height="52" y="190" x="50%-150" />
 
   <g id="bat">
-    <image id="bat-icon" fill="#222222" x="253" y="35" width="16" height="16" class="icon" href="battery_24px.png" />
+    <image id="bat-icon" fill="#ffffff" x="253" y="35" width="16" height="16" class="icon" href="battery_24px.png" />
     <svg x="257" y="37" height="14" width="10">
-      <rect id="bat-fill" width="8" fill="#222222" />
+      <rect id="bat-fill" width="8" fill="#ffffff" />
     </svg>
     <text id="bat-count" x="271" y="51" class="h5" text-length="10">--</text>
   </g>
@@ -28,4 +26,30 @@
   <!-- Weather -->
   <image class="fb-violet" href="weather/thermometer.gray.png" width="24" height="24" x="100%-48" y="270" />
   <text text-length="10" class="h4" x="100%-59" y="290" id="weather" text-anchor="end">---</text>
+
+  <!-- Office images falling animations -->
+
+  <image href="stickers/kevin.png" width="70" height="70" x="25" y="-70">
+    <animate attributeName="y" begin="click" from="-70" to="335" dur="6" final="restore" />
+  </image>
+
+  <image href="stickers/michael_scott_prison_mike.png" width="70" height="70" x="210" y="-70">
+    <animate attributeName="y" begin="click+1" from="-70" to="335" dur="6" final="restore" />
+  </image>
+
+  <image href="stickers/pam_beesly_guns.png" width="70" height="51" x="110" y="-70">
+    <animate attributeName="y" begin="click+2" from="-70" to="335" dur="6" final="restore" />
+  </image>
+
+  <image href="stickers/pretzel_day.png" width="70" height="70" x="200" y="-70">
+    <animate attributeName="y" begin="click+3.6" from="-70" to="335" dur="6" final="restore" />
+  </image>
+
+  <image href="stickers/The_Office_Stanley_Head-Sticker.png" width="70" height="70" x="10" y="-70">
+    <animate attributeName="y" begin="click+4" from="-70" to="335" dur="6" final="restore" />
+  </image>
+
+  <image href="stickers/stapler-in-jello.png" width="70" height="70" x="170" y="-70">
+    <animate attributeName="y" begin="click+5.5" from="-70" to="335" dur="6" final="restore" />
+  </image>
 </svg>
